@@ -14,10 +14,14 @@ Tested on Linux with Python 3.5.
 
 Note: this script does not require the conversion of wavs to flac, but if you intend to adapt it for use with Google's API, you would need to do that (i.e. using the flac package).
 
+---
+
 ## Requirements
 
 + PyAudio==0.2.11
 + SpeechRecognition==3.8.1
+
+---
 
 ## How to use
 
@@ -36,4 +40,5 @@ Assuming you have a number > 0, you can check which devices are detected:
 			print((i,dev['name'],dev['maxInputChannels'])) 
 
 + Once you are satisfied the devices are recognised and working, calibrate the silence `THRESHOLD` in the script (line 17) by calling the `audio_int()` function (i.e. uncomment line 155, comment line 153).
++ Now try calling the `listen_for_speech()` function. It should output your text in the terminal!
 + Edit and plug into your project as required!
